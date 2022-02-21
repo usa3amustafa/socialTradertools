@@ -24,20 +24,25 @@
           <a href="./index.html">
             <img src="./img/logo-dark.png" class="logo" />
           </a>
-          <ul class="nav-links">
-            <li><a class="nav-link" href="./index.html">Home</a></li>
-            <li><a class="nav-link" href="#features">Features</a></li>
-            <li><a class="nav-link" href="#pricing">Pricing</a></li>
-            <li><a class="nav-link" href="#brokers">Brokers</a></li>
-            <li><a class="nav-link" href="#faq">Faq</a></li>
-            <li><a class="nav-link" href="#contact">Contact</a></li>
-          </ul>
-          <ul class="nav-btns">
-            <li><a class="nav-btn btn pri-nav-btn" href="#">Get Started</a></li>
-            <li><a class="nav-btn btn sec-nav-btn" href="#">Login</a></li>
-          </ul>
+          <div class="navbar">
+            <img src="./img/close.png" alt="" class="close-menu-btn" />
+            <ul class="nav-links">
+              <li><a class="nav-link" href="./index.html">Home</a></li>
+              <li><a class="nav-link" href="#features">Features</a></li>
+              <li><a class="nav-link" href="#pricing">Pricing</a></li>
+              <li><a class="nav-link" href="#brokers">Brokers</a></li>
+              <li><a class="nav-link" href="#faq">Faq</a></li>
+              <li><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+            <ul class="nav-btns">
+              <li>
+                <a class="nav-btn btn pri-nav-btn" href="#">Get Started</a>
+              </li>
+              <li><a class="nav-btn btn sec-nav-btn" href="#">Login</a></li>
+            </ul>
+          </div>
           <!-- menu icon  -->
-          <i class="fa-solid fa-bars" id="menu-icon"></i>
+          <img src="./img/open.png" alt="" class="open-menu-btn" />
         </div>
       </nav>
       <!-- nav end  -->
@@ -433,154 +438,101 @@
         <div class="section-title">
           <h2 class="section-title-title">Frequently Asked Questions</h2>
         </div>
-        <article class="question question-one">
-          <div class="question-text">
-            <h2 class="question-text-text">
-              <span class="question-number">01</span>
-              Can I add my accounts using the investor password?
-            </h2>
-            <img
-              src="./img/down-arrow.png"
-              class="question-btn question-btn-open"
-            />
-            <img
-              src="./img/up-arrow.png"
-              class="question-btn question-btn-close hidden"
-            />
-          </div>
-          <div class="answer-text hidden">
-            <p>
-              The investor password on the Metatrader platform allow for
-              read-only access to your account. Trades cannot be placed or
-              modified in investor mode. When adding accounts to Social Trader
-              Tools, Master/Copy from accounts can be added using the investor
-              password as we only require the ability to read trades happening
-              on the account. Slave/Send to accounts require your full
-              Metatrader credentials to open, modify and close trades being
-              copied from your Master/Copy from account. Adding your Slave/Send
-              to account with investor credentials will lead to your trades not
-              being copied, most commonly described in the copier log as error
-              133.
-            </p>
-          </div>
-        </article>
-        <article class="question question-two">
-          <div class="question-text">
-            <h2 class="question-text-text">
-              <span class="question-number">02</span>
-              Can I copy trades between accounts with different base currencies?
-            </h2>
-            <img
-              src="./img/down-arrow.png"
-              class="question-btn question-btn-open"
-            />
-            <img
-              src="./img/up-arrow.png"
-              class="question-btn question-btn-close hidden"
-            />
-          </div>
+        <div class="questions">
+          <article class="question question-one">
+            <div class="question-text">
+              <h2 class="question-text-text">
+                <span class="question-number">01</span>
+                Can I add my accounts using the investor password?
+              </h2>
+            </div>
+            <div class="answer-text hide-answer">
+              <p>
+                The investor password on the Metatrader platform allow for
+                read-only access to your account. Trades cannot be placed or
+                modified in investor mode.
+              </p>
+            </div>
+          </article>
+          <article class="question question-two">
+            <div class="question-text">
+              <h2 class="question-text-text">
+                <span class="question-number">02</span>
+                Can I copy trades between accounts with different base
+                currencies?
+              </h2>
+            </div>
 
-          <div class="answer-text hidden">
-            <p>
-              Yes, of course! Our risk types, risk by balance and risk by equity
-              compensate automatically for the difference in base currencies and
-              will adjust the lot size appropriately.
-            </p>
-          </div>
-        </article>
-        <article class="question question-three">
-          <div class="question-text">
-            <h2 class="question-text-text">
-              <span class="question-number">03</span>
-              Can I copy trades from a Telegram channel?
-            </h2>
-            <img
-              src="./img/down-arrow.png"
-              class="question-btn question-btn-open"
-            />
-            <img
-              src="./img/up-arrow.png"
-              class="question-btn question-btn-close hidden"
-            />
-          </div>
-          <div class="answer-text hidden">
-            <p>
-              If you have access to the signal provider's trading account you
-              can add their account to Social Trader Tools and copy their
-              trades. However, to do so you will require either their full MT4/5
-              credentials or their MT4/5 investor credentials.
-            </p>
-          </div>
-        </article>
-        <article class="question question-four">
-          <div class="question-text">
-            <h2 class="question-text-text">
-              <span class="question-number">04</span>
-              Can I copy trades from cTrader?
-            </h2>
-            <img
-              src="./img/down-arrow.png"
-              class="question-btn question-btn-open"
-            />
-            <img
-              src="./img/up-arrow.png"
-              class="question-btn question-btn-close hidden"
-            />
-          </div>
-          <div class="answer-text hidden">
-            <p>
-              Unfortunately, we do NOT provide the functionality to allow you to
-              copy trades to or from cTrader. We ONLY work with the Metatrader
-              MT4 and MT5 platforms.
-            </p>
-          </div>
-        </article>
-        <article class="question question-five">
-          <div class="question-text">
-            <h2 class="question-text-text">
-              <span class="question-number">05</span>
-              Do you provide a free trial?
-            </h2>
-            <img
-              src="./img/down-arrow.png"
-              class="question-btn question-btn-open"
-            />
-            <img
-              src="./img/up-arrow.png"
-              class="question-btn question-btn-close hidden"
-            />
-          </div>
-          <div class="answer-text hidden">
-            <p>
-              We don't offer free trials unfortunately. It only costs $20 to add
-              2 accounts and test all major functionality. If you are unhappy
-              with our service you can cancel your subscription at any time.
-            </p>
-          </div>
-        </article>
-        <article class="question question-four">
-          <div class="question-text">
-            <h2 class="question-text-text">
-              <span class="question-number">04</span>
-              Can I copy trades from cTrader?
-            </h2>
-            <img
-              src="./img/down-arrow.png"
-              class="question-btn question-btn-open"
-            />
-            <img
-              src="./img/up-arrow.png"
-              class="question-btn question-btn-close hidden"
-            />
-          </div>
-          <div class="answer-text hidden">
-            <p>
-              Unfortunately, we do NOT provide the functionality to allow you to
-              copy trades to or from cTrader. We ONLY work with the Metatrader
-              MT4 and MT5 platforms.
-            </p>
-          </div>
-        </article>
+            <div class="answer-text hide-answer">
+              <p>
+                Yes, of course! Our risk types, risk by balance and risk by
+                equity compensate automatically for the difference in base
+                currencies and will adjust the lot size appropriately.
+              </p>
+            </div>
+          </article>
+          <article class="question question-three">
+            <div class="question-text">
+              <h2 class="question-text-text">
+                <span class="question-number">03</span>
+                Can I copy trades from a Telegram channel?
+              </h2>
+            </div>
+            <div class="answer-text hide-answer">
+              <p>
+                If you have access to the signal provider's trading account you
+                can add their account to Social Trader Tools and copy their
+                trades.
+              </p>
+            </div>
+          </article>
+          <article class="question question-four">
+            <div class="question-text">
+              <h2 class="question-text-text">
+                <span class="question-number">04</span>
+                Can I copy trades from cTrader?
+              </h2>
+            </div>
+            <div class="answer-text hide-answer">
+              <p>
+                Unfortunately, we do NOT provide the functionality to allow you
+                to copy trades to or from cTrader. We ONLY work with the
+                Metatrader MT4 and MT5 platforms.
+              </p>
+            </div>
+          </article>
+          <article class="question question-five">
+            <div class="question-text">
+              <h2 class="question-text-text">
+                <span class="question-number">05</span>
+                Do you provide a free trial?
+              </h2>
+            </div>
+            <div class="answer-text hide-answer">
+              <p>
+                We don't offer free trials unfortunately. It only costs $20 to
+                add 2 accounts and test all major functionality. If you are
+                unhappy with our service you can cancel your subscription at any
+                time.
+              </p>
+            </div>
+          </article>
+          <article class="question question-four">
+            <div class="question-text">
+              <h2 class="question-text-text">
+                <span class="question-number">04</span>
+                Can I copy trades from cTrader?
+              </h2>
+            </div>
+            <div class="answer-text hide-answer">
+              <p>
+                Unfortunately, we do NOT provide the functionality to allow you
+                to copy trades to or from cTrader. We ONLY work with the
+                Metatrader MT4 and MT5 platforms.
+              </p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 

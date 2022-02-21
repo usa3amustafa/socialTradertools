@@ -1,75 +1,26 @@
-console.log('hello')
-const accordian = document.querySelector('.accordian')
+// reponsive navbar
 
-accordian.addEventListener('click', function (e) {
-  if (e.target.classList.contains('question-btn')) {
-    e.currentTarget.querySelectorAll('.question-btn-open').forEach(btnOpen => {
-      btnOpen.classList.remove('hidden')
-    })
-    e.currentTarget
-      .querySelectorAll('.question-btn-close')
-      .forEach(btnClose => {
-        btnClose.classList.add('hidden')
-      })
-    e.currentTarget.querySelectorAll('.question').forEach(question => {
-      question.classList.remove('border-active')
-    })
-    e.currentTarget.querySelectorAll('.question-text').forEach(qtxt => {
-      qtxt.classList.remove('text-active')
-    })
-    e.currentTarget.querySelectorAll('.question-number').forEach(qnmb => {
-      qnmb.classList.remove('text-active')
-    })
-    e.currentTarget.querySelectorAll('.answer-text').forEach(ans => {
-      ans.classList.add('hidden')
-    })
-    // hide the open button and display the close btn
-    e.target.classList.add('hidden')
-    e.target
-      .closest('.question')
-      .querySelector('.question-btn-close')
-      .classList.remove('hidden')
-    // border on the question parent
-    e.target.closest('.question').classList.add('border-active')
-    // question text coloring
-    e.target
-      .closest('.question')
-      .querySelector('.question-text')
-      .classList.add('text-active')
-    //question number coloring
-    e.target
-      .closest('.question')
-      .querySelector('.question-number')
-      .classList.add('text-active')
-    // displaying the answer text
-    e.target
-      .closest('.question')
-      .querySelector('.answer-text')
-      .classList.remove('hidden')
-  }
-  if (e.target.classList.contains('question-btn-close')) {
-    // hide the open button and display the close btn
-    e.target.classList.add('hidden')
-    e.target
-      .closest('.question')
-      .querySelector('.question-btn-open')
-      .classList.remove('hidden')
-    // border on the question parent
-    e.target.closest('.question').classList.remove('border-active')
-    // question text coloring
-    e.target
-      .closest('.question')
-      .querySelector('.question-text')
-      .classList.remove('text-active')
-    //question number coloring
-    e.target
-      .closest('.question')
-      .querySelector('.question-number')
-      .classList.remove('text-active')
-    // displaying the answer text
-    e.target
-      .closest('.question')
-      .querySelector('.answer-text')
-      .classList.add('hidden')
-  }
-})
+const openMenuBtn = document.querySelector('.open-menu-btn')
+const closeMenuBtn = document.querySelector('.close-menu-btn')
+const navbar = document.querySelector('.navbar')
+const navLinks = document.querySelectorAll('.nav-link')
+const navBtns = document.querySelectorAll('.nav-btn')
+
+const showNavbar = function () {
+  navbar.classList.add('show-navbar')
+  openMenuBtn.classList.add('hidden')
+}
+
+const removeNavbar = function () {
+  navbar.classList.remove('show-navbar')
+  openMenuBtn.classList.remove('hidden')
+}
+
+openMenuBtn.addEventListener('click', showNavbar)
+closeMenuBtn.addEventListener('click', removeNavbar)
+
+navLinks.forEach(navLink => navLink.addEventListener('click', removeNavbar))
+
+navBtns.forEach(navBtn => navBtn.addEventListener('click', removeNavbar))
+
+// faq section
