@@ -576,11 +576,11 @@ textarea {
   left: 50%;
   text-align: center;
   transform: translate(-50%, -50%);
+  font-size: 1.3rem;
 }
 .newsletter-text p {
   color: var(--white-clr);
   margin-bottom: 1rem;
-  font-size: 1.3rem;
   font-weight: 500;
 }
 .newsletter-btn {
@@ -664,6 +664,7 @@ footer {
     z-index: 1;
     transition: all 0.3s ease-in;
     overflow: hidden;
+    backdrop-filter: blur(2px);
   }
   .show-navbar {
     width: 100%;
@@ -771,6 +772,7 @@ footer {
   /* footer start  */
 
   .footer-top-text {
+    text-align: center;
     font-size: 1.3rem;
   }
   .footer-bottom {
@@ -895,6 +897,7 @@ footer {
     margin-bottom: 1rem;
     font-size: 1.75rem;
   }
+
   .header-text {
     padding: 2rem;
   }
@@ -971,15 +974,20 @@ footer {
   /* faq section end */
 
   .newsletter-text {
-    width: 100%;
+    width: 90%;
     font-size: 1rem;
   }
 
   .contact-info-text {
     font-size: 0.9rem;
   }
+  .contact-info-text {
+    margin-bottom: 1rem;
+  }
   .contact-info-email {
+    font-weight: 500;
     font-size: 1rem;
+    margin-bottom: 1rem;
     align-items: center;
   }
   .contact-form {
@@ -991,4 +999,33 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  .pricing-section {
+    grid-template-columns: 1fr;
+  }
+  .pricing-card {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .question {
+    padding: 2rem;
+  }
+  .answer-text {
+    margin-top: 1rem;
+  }
+  .contact-info {
+    padding: 1rem;
+  }
+  .email {
+    font-size: 1rem;
+  }
+
+  .footer-bottom-text {
+    text-align: center;
+    line-height: 1.6;
+  }
 }
