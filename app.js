@@ -23,4 +23,20 @@ navLinks.forEach(navLink => navLink.addEventListener('click', removeNavbar))
 
 navBtns.forEach(navBtn => navBtn.addEventListener('click', removeNavbar))
 
-// faq section
+// sticky nav
+
+const sectionOne = document.getElementById('features')
+const nav = document.getElementById('nav')
+const logo = document.querySelector('.logo')
+
+const sectionOneCoords = sectionOne.getBoundingClientRect()
+
+window.addEventListener('scroll', function () {
+  if (window.scrollY > sectionOneCoords.top) {
+    nav.classList.add('nav-sticky')
+    logo.src = './img/logo.png'
+  } else {
+    nav.classList.remove('nav-sticky')
+    logo.src = './img/logo-dark.png'
+  }
+})
