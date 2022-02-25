@@ -906,9 +906,6 @@ footer {
 }
 
 @media screen and (max-width: 766px) {
-  section {
-    padding: 2.5rem 0;
-  }
   .section-title-title {
     margin-bottom: 1rem;
     font-size: 1.75rem;
@@ -1023,7 +1020,7 @@ footer {
     grid-template-columns: 1fr;
   }
   .pricing-card {
-    max-width: 300px;
+    max-width: 250px;
     width: 100%;
     margin: 0 auto;
   }
