@@ -25,18 +25,45 @@ navBtns.forEach(navBtn => navBtn.addEventListener('click', removeNavbar))
 
 // sticky nav
 
-const sectionOne = document.getElementById('features')
+// const sectionOne = document.getElementById('features')
+// const nav = document.getElementById('nav')
+// const logo = document.querySelector('.logo')
+
+// const sectionOneCoords = sectionOne.getBoundingClientRect()
+
+// window.addEventListener('scroll', function () {
+//   if (window.scrollY > sectionOneCoords.top) {
+//     nav.classList.add('nav-sticky')
+//     logo.src = './img/logo.png'
+//   } else {
+//     nav.classList.remove('nav-sticky')
+//     logo.src = './img/logo-dark.png'
+//   }
+// })
+
+// sticky nav using intersection observer API
+const sectionOne = document.querySelector('.header')
 const nav = document.getElementById('nav')
 const logo = document.querySelector('.logo')
+const navHeight = nav.getBoundingClientRect().height
 
-const sectionOneCoords = sectionOne.getBoundingClientRect()
-
-window.addEventListener('scroll', function () {
-  if (window.scrollY > sectionOneCoords.top) {
+const stickyNav = function (enteries) {
+  const [entry] = enteries
+  if (!entry.isIntersecting) {
     nav.classList.add('nav-sticky')
     logo.src = './img/logo.png'
   } else {
     nav.classList.remove('nav-sticky')
     logo.src = './img/logo-dark.png'
   }
-})
+}
+
+const stickyNavOptions = {
+  root: null,
+  threshold: 0.1,
+  rootMargin: `-${navHeight}px`,
+}
+
+const observer = new IntersectionObserver(stickyNav, stickyNavOptions)
+
+observer.observe(sectionOne)
